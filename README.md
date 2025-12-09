@@ -30,7 +30,7 @@ The repository includes processed data for the following market leaders:
 * **Format:** CSV (Comma Separated Values).
 * **Processing Status:** Cleaned, Sorted, and Feature Engineered.
 
-## 🛠 Features Dictionary (Columns)
+## Features Dictionary (Columns)
 Each dataset includes raw market data combined with calculated technical indicators:
 
 | Column Name | Description |
@@ -50,6 +50,3 @@ Each dataset includes raw market data combined with calculated technical indicat
 You can load any stock dataset directly into Pandas for model training.
 
 
-
-print(f"Loaded {len(df)} records for {url}")
-print(df.head())
