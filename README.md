@@ -1,19 +1,35 @@
-# Egyptian Stock Market Intraday Dataset
+# Egyptian Stock Market Intraday Datasets
 
-## Dataset Overview
-This repository hosts a high-fidelity, pre-processed intraday dataset for **Fawry (FWRY)**, a leading stock in the Egyptian Exchange (EGX30).
+## Overview
+This repository hosts a collection of **high-fidelity, pre-processed intraday datasets** for top-performing companies in the **Egyptian Exchange (EGX30)**.
 
-The dataset is engineered specifically for **Deep Learning (LSTM) training**, bridging the gap in available high-frequency financial data for the Egyptian market. It contains **20,000+ records** with a **1-minute time interval**, processed to include technical indicators and predictive targets.
+The datasets are engineered specifically for **Deep Learning (LSTM) training**, bridging the gap in available high-frequency financial data for the Egyptian market. Each dataset contains **20,000+ records** with a **1-minute time interval**, processed to include technical indicators and predictive targets.
+
+> **Methodology:** Data was aggregated using manual exports from TradingView Pro and verified against Yahoo Finance to ensure accuracy and continuity.
+
+## Available Stocks (Tickers)
+The repository includes processed data for the following market leaders:
+
+* **FWRY** (Fawry for Banking Technology)
+* **COMI** (Commercial International Bank)
+* **EAST** (Eastern Company)
+* **HRHO** (EFG Hermes)
+* **ETEL** (Telecom Egypt)
+* **SWDY** (Elsewedy Electric)
+* **TMGH** (Talaat Moustafa Group)
+* **ABUK** (Abou Kir Fertilizers)
+* **EFIH** (e-finance)
+* **ORAS** (Orascom Construction)
+* And others (EMFD, EXPA, IRON, etc.)
 
 ## Data Specifications
-* **Stock Symbol:** `FWRY.CA`
-* **Timeframe:** 1-Minute Interval (Intraday)
-* **Total Records:** +20,000 Rows
-* **Format:** CSV (Comma Separated Values)
+* **Timeframe:** 1-Minute Interval (Intraday).
+* **Total Records:** +20,000 Rows per stock.
+* **Format:** CSV (Comma Separated Values).
 * **Processing Status:** Cleaned, Sorted, and Feature Engineered.
 
-## Features Dictionary (Columns)
-The dataset includes raw market data combined with calculated technical indicators:
+## 🛠 Features Dictionary (Columns)
+Each dataset includes raw market data combined with calculated technical indicators:
 
 | Column Name | Description |
 | :--- | :--- |
@@ -29,4 +45,9 @@ The dataset includes raw market data combined with calculated technical indicato
 | `Target_Change` | **Predictive Target:** The percentage change in price **5 minutes into the future**. |
 
 ## Usage with Python
-You can load this dataset directly into Pandas for model training:
+You can load any stock dataset directly into Pandas for model training.
+
+
+
+print(f"Loaded {len(df)} records for {url}")
+print(df.head())
